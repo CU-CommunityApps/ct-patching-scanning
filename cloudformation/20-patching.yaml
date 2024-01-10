@@ -635,7 +635,15 @@ Resources:
             timeoutSeconds: 300
             runCommand:
               - "#!/bin/bash"
-              - if [ -n "$(command -v yum)" ] ; then
+              - if [ -n "$(command -v dnf)" ] ; then
+              -   echo Using dnf
+              -   uname -r
+              -   echo Kernels before cleanup
+              -   rpm -qa kernel
+              -   dnf remove --oldinstallonly --setopt installonly_limit=2
+              -   echo Kernels after cleanup
+              -   rpm -qa kernel    
+              - elif [ -n "$(command -v yum)" ] ; then
               -   echo Using yum
               -   uname -r
               -   echo Kernels before cleanup
