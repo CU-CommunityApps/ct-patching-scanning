@@ -113,6 +113,38 @@ Resources:
       #   PatchFilterGroup
       # Sources : PatchSource
 
+  OraclePatchBaseline:
+    Type: "AWS::SSM::PatchBaseline"
+    Properties:
+      Name: cu-cit-cloud-team-patching-Oracle
+      # Options: WINDOWS | AMAZON_LINUX | AMAZON_LINUX_2 | AMAZON_LINUX_2022 | UBUNTU | REDHAT_ENTERPRISE_LINUX | SUSE | CENTOS | ORACLE_LINUX | DEBIAN | MACOS | RASPBIAN | ROCKY_LINUX | ALMA_LINUX | AMAZON_LINUX_2023
+      OperatingSystem: ORACLE_LINUX
+      Description: "Patch baseline for use with https://github.com/CU-CommunityApps/ct-patching-scanning"
+      PatchGroups:
+        - cu-cit-cloud-team-patching
+      ApprovalRules:
+        PatchRules:
+          - PatchFilterGroup:
+              # See https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html
+              # PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID | SECTION | PRIORITY | SEVERITY
+              PatchFilters:
+                - Key: PRODUCT
+                  Values:
+                    - "*"
+            ApproveAfterDays: !Ref PatchApprovalDelayParam
+            ComplianceLevel: UNSPECIFIED
+            EnableNonSecurity: true
+      # ApprovedPatches:
+      #   - String
+      ApprovedPatchesComplianceLevel: UNSPECIFIED
+      ApprovedPatchesEnableNonSecurity: false
+      # RejectedPatches:
+      #   - String
+      RejectedPatchesAction: ALLOW_AS_DEPENDENCY
+      # GlobalFilters:
+      #   PatchFilterGroup
+      # Sources : PatchSource
+
   RHELPatchBaseline:
     Type: "AWS::SSM::PatchBaseline"
     Properties:
