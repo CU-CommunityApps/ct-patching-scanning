@@ -43,6 +43,11 @@ Resources:
       #   Logging Configuration
       # NotificationConfiguration:
       #   Notification Configuration
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
       # ReplicationConfiguration:
       #   Replication Configuration
       Tags:
@@ -53,3 +58,22 @@ Resources:
       #   Versioning Configuration
       # WebsiteConfiguration:
       #   Website Configuration Type
+
+  LoggingS3BucketPolicy:
+    Type: "AWS::S3::BucketPolicy"
+    DeletionPolicy: Retain
+    Properties:
+      Bucket: !Ref LoggingS3Bucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: DenyInsecureTransport
+            Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource:
+              - !Sub 'arn:aws:s3:::${LoggingS3Bucket}/*'
+              - !Sub 'arn:aws:s3:::${LoggingS3Bucket}'
+            Condition:
+              Bool:
+                aws:SecureTransport: 'false'
