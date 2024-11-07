@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "aws-sdk": ">= 2.176.0",
-    "nodemailer": "^4.6.3"
-  }
-}
