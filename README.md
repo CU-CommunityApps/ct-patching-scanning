@@ -6,11 +6,16 @@ Scripts and templates relevant to patching and scanning EC2 instances
 
 See https://confluence.cornell.edu/display/CLOUD/Beta+AWS+Inspector+and+Patching
 
+## Change Log
+
+### 2024-11-07
+- Moved and renamed repo to https://github.com/cu-cit-cloud-team/aws-patching-scanning; was https://github.com/CU-CommunityApps/ct-patching-scanning.
+- Removed unused Lambda function and AMI data file.
+- Renamed default branch to `main`; was `master`.
+
 ## Table of Contents
 
 * [cloudformation](cloudformation) contains CloudFormation templates for deploying this functionality.
-
-* [lambda-unused](lambda-unused) contains a lambda function developed to catch Inspector notifications and send Inspector reports
 
 * [scripts](scripts) contains reporting scripts used by Jenkins jobs
 

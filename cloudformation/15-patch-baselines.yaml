@@ -17,7 +17,7 @@ Resources:
       Name: cu-cit-cloud-team-patching-AmazonLinux
       # Options: WINDOWS, AMAZON_LINUX, AMAZON_LINUX_2, UBUNTU, REDHAT_ENTERPRISE_LINUX, SUSE, and CENTOS
       OperatingSystem: AMAZON_LINUX
-      Description: "Patch baseline for use with https://github.com/CU-CommunityApps/ct-patching-scanning"
+      Description: "Patch baseline for use with https://github.com/cu-cit-clout-team/ct-patching-scanning"
       PatchGroups:
         - cu-cit-cloud-team-patching
       GlobalFilters:
@@ -51,7 +51,7 @@ Resources:
       Name: cu-cit-cloud-team-patching-AmazonLinux2
       # Options: WINDOWS, AMAZON_LINUX, AMAZON_LINUX_2, UBUNTU, REDHAT_ENTERPRISE_LINUX, SUSE, and CENTOS
       OperatingSystem: AMAZON_LINUX_2
-      Description: "Patch baseline for use with https://github.com/CU-CommunityApps/ct-patching-scanning"
+      Description: "Patch baseline for use with https://github.com/cu-cit-clout-team/ct-patching-scanning"
       PatchGroups:
         - cu-cit-cloud-team-patching
       GlobalFilters:
@@ -87,7 +87,7 @@ Resources:
       Name: cu-cit-cloud-team-patching-Centos
       # Options: WINDOWS, AMAZON_LINUX, AMAZON_LINUX_2, UBUNTU, REDHAT_ENTERPRISE_LINUX, SUSE, and CENTOS
       OperatingSystem: CENTOS
-      Description: "Patch baseline for use with https://github.com/CU-CommunityApps/ct-patching-scanning"
+      Description: "Patch baseline for use with https://github.com/cu-cit-clout-team/ct-patching-scanning"
       PatchGroups:
         - cu-cit-cloud-team-patching
       ApprovalRules:
@@ -119,7 +119,7 @@ Resources:
       Name: cu-cit-cloud-team-patching-Oracle
       # Options: WINDOWS | AMAZON_LINUX | AMAZON_LINUX_2 | AMAZON_LINUX_2022 | UBUNTU | REDHAT_ENTERPRISE_LINUX | SUSE | CENTOS | ORACLE_LINUX | DEBIAN | MACOS | RASPBIAN | ROCKY_LINUX | ALMA_LINUX | AMAZON_LINUX_2023
       OperatingSystem: ORACLE_LINUX
-      Description: "Patch baseline for use with https://github.com/CU-CommunityApps/ct-patching-scanning"
+      Description: "Patch baseline for use with https://github.com/cu-cit-clout-team/ct-patching-scanning"
       PatchGroups:
         - cu-cit-cloud-team-patching
       ApprovalRules:
@@ -151,7 +151,7 @@ Resources:
       Name: cu-cit-cloud-team-patching-RHEL
       # Options: WINDOWS, AMAZON_LINUX, AMAZON_LINUX_2, UBUNTU, REDHAT_ENTERPRISE_LINUX, SUSE, and CENTOS
       OperatingSystem: REDHAT_ENTERPRISE_LINUX
-      Description: "Patch baseline for use with https://github.com/CU-CommunityApps/ct-patching-scanning"
+      Description: "Patch baseline for use with https://github.com/cu-cit-clout-team/ct-patching-scanning"
       PatchGroups:
         - cu-cit-cloud-team-patching
       GlobalFilters:
@@ -196,7 +196,7 @@ Resources:
     Properties:
       Name: cu-cit-cloud-team-patching-Ubuntu
       OperatingSystem: UBUNTU
-      Description: "Patch baseline for use with https://github.com/CU-CommunityApps/ct-patching-scanning"
+      Description: "Patch baseline for use with https://github.com/cu-cit-clout-team/ct-patching-scanning"
       PatchGroups:
         - cu-cit-cloud-team-patching
       GlobalFilters:
@@ -231,7 +231,7 @@ Resources:
       Name: cu-cit-cloud-team-patching-Windows
       # Options: WINDOWS, AMAZON_LINUX, AMAZON_LINUX_2, UBUNTU, REDHAT_ENTERPRISE_LINUX, SUSE, and CENTOS
       OperatingSystem: WINDOWS
-      Description: "Patch baseline for use with https://github.com/CU-CommunityApps/ct-patching-scanning"
+      Description: "Patch baseline for use with https://github.com/cu-cit-clout-team/ct-patching-scanning"
       PatchGroups:
         - cu-cit-cloud-team-patching
       GlobalFilters:
